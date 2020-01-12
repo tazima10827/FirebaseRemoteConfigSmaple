@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ba-8j-PaV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GenJyuuGothic-Monospace-Medium.ttf">
+            <string>GenJyuuGothic-Monospace-Medium</string>
+        </array>
+        <array key="GenJyuuGothic-Monospace-Regular.ttf">
+            <string>GenJyuuGothic-Monospace-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Card Remote Config View Controller-->
+        <scene sceneID="WTU-Wh-N7H">
+            <objects>
+                <viewController storyboardIdentifier="CardRemoteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ba-8j-PaV" customClass="CardRemoteConfigViewController" customModule="FirebaseRemoteConfigSmaple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvC-2l-Muk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-1V-SVE">
+                                <rect key="frame" x="57" y="245.5" width="300" height="406"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6F-Jw-3xD">
+                                        <rect key="frame" x="161" y="349" width="123" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Monospace-Regular" family="Gen Jyuu Gothic Monospace" pointSize="14"/>
+                                        <state key="normal" title="回答する！">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="presentWebButton:" destination="9ba-8j-PaV" eventType="touchUpInside" id="46Q-eZ-JKd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwB-B7-SEN">
+                                        <rect key="frame" x="17" y="349" width="123" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Monospace-Medium" family="Gen Jyuu Gothic Monospace" pointSize="14"/>
+                                        <state key="normal" title="とじる">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="closeButton:" destination="9ba-8j-PaV" eventType="touchUpInside" id="hpI-M5-sbT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-sv-HAR">
+                                        <rect key="frame" x="0.0" y="70" width="300" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="内容" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-uz-FQo">
+                                        <rect key="frame" x="13" y="272" width="275" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Monospace-Regular" family="Gen Jyuu Gothic Monospace" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8e-zR-L5W">
+                                        <rect key="frame" x="29" y="15" width="243" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Monospace-Medium" family="Gen Jyuu Gothic Monospace" pointSize="16"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.38823529410000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O2l-1V-SVE" secondAttribute="height" multiplier="83:60" constant="-260.94999999999993" id="16J-Dc-Ocb"/>
+                                    <constraint firstAttribute="width" constant="300" id="cH6-IE-FIK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O2l-1V-SVE" firstAttribute="centerY" secondItem="GvC-2l-Muk" secondAttribute="centerY" constant="0.5" id="2hx-Og-Krf"/>
+                            <constraint firstItem="O2l-1V-SVE" firstAttribute="centerX" secondItem="GvC-2l-Muk" secondAttribute="centerX" id="YZ0-Ve-iWM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CfS-q7-WP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2zO-mD-xV7"/>
+                    <connections>
+                        <outlet property="bodyTextView" destination="wTv-uz-FQo" id="9Jm-gk-Ckx"/>
+                        <outlet property="cardImage" destination="NuK-sv-HAR" id="v1X-CG-TaG"/>
+                        <outlet property="closeButton" destination="iwB-B7-SEN" id="Fcr-Vm-80e"/>
+                        <outlet property="modalView" destination="O2l-1V-SVE" id="1B8-gD-z3c"/>
+                        <outlet property="presentWebButton" destination="k6F-Jw-3xD" id="6w1-Qs-Ulh"/>
+                        <outlet property="titleTextLabel" destination="I8e-zR-L5W" id="yfe-sM-a2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08p-8z-sQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="-285.26785714285711"/>
+        </scene>
+    </scenes>
+</document>
