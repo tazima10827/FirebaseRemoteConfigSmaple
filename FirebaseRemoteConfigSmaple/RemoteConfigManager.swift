@@ -5,9 +5,12 @@ class RemoteConfigManager {
     private let remoteConfig = RemoteConfig.remoteConfig()
     private let jsonDecoder = JSONDecoder()
     private var defaultValue: [String: NSObject] = [:]
-    var titleString: String = ""
+    //初回起動時の値
+    var titleString: String = "まだデータがありません。"
+    //パラメータキー
     private let titleKey = "title_name"
     var cardRemoteConfig: CardRemomteConfigEntity?
+    //パラメータキー
     private let cardKey = "card_key"
     
     
